@@ -1,0 +1,261 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* cursor: none; */
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    background-image: url("assets/dotted.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+#section1{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background: #0000008a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+   
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /* /* background-color: #333;  */
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.navbar-links li {
+    list-style: none;
+    /* /* padding: 20px;  */
+    margin: auto;
+
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    width: 15vw;
+    min-width: 130px;
+    text-align: center;
+}
+
+.navbar-links li a:hover{
+    background-color: black;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .5s ease-in-out;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar1,.bar2,.bar3{
+    height: 3px;
+    width: 100%;
+    background-color: white ;
+    border-radius: 10px;
+}
+
+h1{
+    font-size: 8vw;
+    color: whitesmoke;
+    padding-bottom: 5px;
+    animation: transitionIn 3s;
+    /* transform: translateY(-55%); */
+
+}
+
+#head-link{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+h3{
+    font-size: auto;
+    margin-top: -3vh;
+    color: whitesmoke;
+    animation: transitionIn 3s;
+    
+}
+
+.he{
+    width: 60%;
+    margin: auto;
+    /* border: 2px solid beige; */
+    padding-bottom: 10vh;
+}
+
+.btn{
+    width: 50%;
+    margin: auto;
+    height: auto;
+    /* border: 2px solid beige; */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.main{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    /* border: 2px solid chartreuse; */
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#btn1{
+    position: absolute;
+    height: 7vh;
+    width: 23vw;
+    /* margin-left: 5vw; */
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    animation: transitionIn 3s;
+    min-height: 50px;
+}
+
+#btn1:hover{
+    background-color: rgb(40, 137, 194);
+}
+
+#btn2{
+    height: 7vh;
+    width: 23vw;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    animation: transitionIn 3s;
+    min-height: 50px;
+}
+
+#btn2:hover{
+    background-color: rgb(49, 192, 161);
+}
+
+
+@media(max-width:600px){
+    .btn{
+        display: flex;
+        flex-direction: column;
+        height: 17vh;
+    }
+    #btn1{
+        width: 50%;
+        
+    }
+    #btn2{
+        width: 100%;
+    }
+
+}
+
+a{
+    text-decoration: none;
+}
+h4{
+    margin-top: 1.9vh;
+    text-decoration: none;
+}
+
+
+ .mains{
+     animation: transitionIn 1s;
+ }
+
+ @keyframes transitionIn{
+     from{
+         opacity: 0;
+         /* transform: rotateY(10deg); */
+
+     }
+     to{
+         opacity: 1;
+     }
+}
+
+
+@media(max-width:700px) and (max-height:900px){
+    .toggle-button{
+        display:flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar{
+
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 0rem;
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+
+    .btn2{
+        display: flex;
+
+    }
+
+}
